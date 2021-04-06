@@ -19,10 +19,10 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    dice = message.content.split()[0]
+    prefix = message.content.split()[0]
     command = message.content.split()[1]
 
-    if command == '/dice':
+    if prefix == '/dice':
         if command[:6] in ['choice', 'CHOICE']:
             result = choice(command)
         else:
