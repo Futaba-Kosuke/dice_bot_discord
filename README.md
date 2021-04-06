@@ -4,7 +4,7 @@ TRPGなどに欠かせないダイスロールをdiscordボットで実装しま
  
 ## Demo
  
-![]()
+![](./.imgs/readme_001.png)
  
 ## Requirement
 
