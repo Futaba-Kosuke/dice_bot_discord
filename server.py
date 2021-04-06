@@ -3,6 +3,7 @@ import os
 import discord
 
 from utils.dice.main import exec_command
+from utils.choice.main import choice
 
 DISCORD_ACCESS_TOKEN = os.environ['DISCORD_ACCESS_TOKEN']
 
@@ -18,9 +19,15 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    if message.content.split()[0] == '/dice':
-        command = message.content.split()[1]
-        result = exec_command(command)
+    dice = message.content.split()[0]
+    command = message.content.split()[1]
+
+    if command == '/dice':
+        if command[:6] in ['choice', 'CHOICE']:
+            result = choice(command)
+        else:
+            result = exec_command(command)
+        
         reply_message = f'{message.author.mention}\n{result}'
         await message.channel.send(reply_message)
 
