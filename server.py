@@ -2,8 +2,7 @@ import os
 
 import discord
 
-from utils.dice.main import exec_command
-from utils.choice.main import choice
+from utils.dice_tool import exec_command
 
 DISCORD_ACCESS_TOKEN = os.environ['DISCORD_ACCESS_TOKEN']
 
@@ -23,10 +22,7 @@ async def on_message(message):
     command = message.content.split()[1]
 
     if command == '/dice':
-        if command[:6] in ['choice', 'CHOICE']:
-            result = choice(command)
-        else:
-            result = exec_command(command)
+        result = exec_command(command = command)
         
         reply_message = f'{message.author.mention}\n{result}'
         await message.channel.send(reply_message)
