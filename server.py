@@ -21,7 +21,7 @@ async def on_message(message):
     prefix = message.content.split()[0]
     command = message.content.split()[1]
 
-    if command == '/dice':
+    if prefix == '/dice':
         result = exec_command(command = command)
         
         reply_message = f'{message.author.mention}\n{result}'
