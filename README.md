@@ -31,3 +31,6 @@ python -m pip install -r requirements.txt
 # Start the server
 python server.py
 ```
+
+## Submodules
+- [dice_tools](https://github.com/Futaba-Kosuke/dice_tools)
