@@ -14,7 +14,7 @@ TRPGなどに欠かせないダイスロールをdiscordボットで実装しま
  
 ```bash
 # Clone
-git clone https://github.com/Futaba-Kosuke/dice_bot_discord
+git clone --recursive https://github.com/Futaba-Kosuke/dice_bot_discord
 cd dice_bot_discord
 
 # (optional) Build the virtual environment
