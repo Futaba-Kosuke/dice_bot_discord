@@ -2,7 +2,7 @@ import os
 
 import discord
 
-from utils.dice_tool import exec_command
+from utils.dice_tools import exec_command
 
 DISCORD_ACCESS_TOKEN = os.environ['DISCORD_ACCESS_TOKEN']
 
