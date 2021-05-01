@@ -19,13 +19,18 @@ async def on_message(message):
         return
 
     prefix = message.content.split()[0]
-    command = message.content.split()[1]
 
     if prefix == '/dice':
-        result = exec_command(command = command)
-        
-        reply_message = f'{message.author.mention}\n{result}'
-        await message.channel.send(reply_message)
+
+        try:
+            command = message.content.split()[1]
+            result = exec_command(command = command)
+            
+            reply_message = f'{message.author.mention}\n{result}'
+            await message.channel.send(reply_message)
+
+        except:
+            return
 
 def main():
     client.run(DISCORD_ACCESS_TOKEN)
