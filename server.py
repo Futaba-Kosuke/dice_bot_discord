@@ -18,8 +18,8 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    if message.content == 'にゃーん':
-        cat_message = 'にゃーん'
+    if message.content == 'neko':
+        cat_message = 'neko'
         await message.channel.send(cat_message)
 
     prefix = message.content.split()[0]
