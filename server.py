@@ -19,7 +19,7 @@ async def on_message(message):
         return
 
     if message.content.split()[0] == 'neko':
-        cat_message = 'にゃーん！！'
+        cat_message = 'にゃーん！！！'
         await message.channel.send(cat_message)
 
     prefix = message.content.split()[0]
