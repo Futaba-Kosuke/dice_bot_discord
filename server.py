@@ -19,8 +19,8 @@ async def on_message(message):
         return
 
     if message.content == 'にゃーん':
-        reply_message = 'にゃーん'
-        await message.channel.send(reply_message)
+        cat_message = 'にゃーん'
+        await message.channel.send(cat_message)
 
     prefix = message.content.split()[0]
 
